@@ -1,4 +1,40 @@
-<?php include('top.php'); ?>
+<?php include('top.php'); 
+
+$first_name = 'Brian';
+$last_name = 'Koskei';
+$email = 'bkimutai2021@gmail.com';
+$phone_number = '+254712035642';
+$currency = 'KES';
+$amount = '1';
+$reference = ''; // Set the reference value if needed
+$consumer_keys = 'checked';
+$description = ''; // Set the description value if needed
+
+// Encode the dynamic data
+$encoded_first_name = urlencode($first_name);
+$encoded_last_name = urlencode($last_name);
+$encoded_email = urlencode($email);
+$encoded_phone_number = urlencode($phone_number);
+$encoded_currency = urlencode($currency);
+$encoded_amount = urlencode($amount);
+$encoded_reference = urlencode($reference);
+$encoded_consumer_keys = urlencode($consumer_keys);
+$encoded_description = urlencode($description);
+
+// Construct the API link
+$api_link = "http://localhost/payments/iframe.php?" .
+    "first_name={$encoded_first_name}&" .
+    "last_name={$encoded_last_name}&" .
+    "email={$encoded_email}&" .
+    "phone_number={$encoded_phone_number}&" .
+    "currncy={$encoded_currency}&" .
+    "amount={$encoded_amount}&" .
+    "reference={$encoded_reference}&" .
+    "consumer_keys={$encoded_consumer_keys}&" .
+    "description={$encoded_description}";
+
+echo $api_link;
+?>
 <script>
 				function referenceShuffle(val){
 					if (document.getElementById('ref').checked){
