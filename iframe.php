@@ -3,6 +3,8 @@
 require_once('helper/pesapalV30Helper.php');
 include_once('top.php');
 
+//STRUCTURE OF THE API LINK
+//http://localhost/payments/iframe.php?first_name=Brian&last_name=Koskei&email=bkimutai2021%40gmail.com&phone_number=%2B254712035642&currency=KES&amount=1&reference=null&consumer_keys=checked&description=null
 
 // temporary key starage... you can store this on db
 // KenyanTest Consumer/secret keys.. you can replace this with your own set for live testing
